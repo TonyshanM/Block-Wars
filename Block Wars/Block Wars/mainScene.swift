@@ -18,6 +18,7 @@ var haveFinish:Bool = false
 var fourCubic:SKSpriteNode? = nil
 var selfcenterView:SKView? = nil
 var cubicX:CGFloat = wscreen * 0.5
+var currentCubic:SKSpriteNode? = nil
 
 
 
@@ -26,6 +27,9 @@ class mainScene: SKScene,SKPhysicsContactDelegate {
     override func didMove(to view: SKView) {
         createContent()
         self.physicsWorld.contactDelegate = self;
+        //设置边界
+        self.physicsBody = SKPhysicsBody.init(edgeLoopFrom: self.frame)
+        
     }
     func createContent() {
 //        let centerView:SKView = SKView.init()
@@ -76,6 +80,7 @@ class mainScene: SKScene,SKPhysicsContactDelegate {
         }
         if nodeB.hasActions() {
             nodeB.removeAction(forKey: "our")
+            currentCubic = nil
             addCubic()
         }
     }
@@ -92,20 +97,39 @@ class mainScene: SKScene,SKPhysicsContactDelegate {
             cubic.position = CGPoint(x: wscreen * 0.5, y: 204.0/667.0 * hscreen)
             let runaction:SKAction = SKAction.sequence([SKAction.moveBy(x: 0, y: 1500, duration: 50)])
             cubic.run(runaction, withKey: "our")
+            currentCubic = cubic
             self.addChild(cubic)
         }
     }
     
-    func leftClick() {
-        print("zuo")
-    }
+    
+    
+    
     func rightClick() {
         print("you")
+        var temp:CGPoint = (currentCubic?.position)!
+        temp.x -= 40
+        currentCubic?.position = temp
+    }
+    func leftClick() {
+        print("zuo")
+        var temp:CGPoint = (currentCubic?.position)!
+        temp.x += 40
+        currentCubic?.position = temp
     }
     func fireClick() {
         print("jiang")
     }
     func changeClick() {
        print("bian")
+    }
+    
+    
+    override func didSimulatePhysics() {
+        self.enumerateChildNodes(withName: "cubic") { (node, stop) in
+            if node.position.y < 200.0/667.0 * hscreen {
+                node.removeFromParent()
+            }
+        }
     }
 }

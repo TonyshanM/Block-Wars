@@ -16,7 +16,8 @@ class cubicCreate: NSObject {
         cubic.size = CGSize(width: 40, height: 40)
         cubic.color = UIColor.yellow
         cubic.name = "cubic"
-        cubic.physicsBody = SKPhysicsBody.init(rectangleOf: cubic.size)
+        let temp:CGSize = CGSize(width: 39.9, height: 40)
+        cubic.physicsBody = SKPhysicsBody.init(rectangleOf: temp)
         cubic.physicsBody?.categoryBitMask = cubicCatargy
         cubic.physicsBody?.contactTestBitMask = cubicCatargy
         cubic.physicsBody?.collisionBitMask = cubicCatargy
