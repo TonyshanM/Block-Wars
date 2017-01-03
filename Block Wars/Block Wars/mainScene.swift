@@ -19,6 +19,7 @@ var fourCubic:SKSpriteNode? = nil
 var selfcenterView:SKView? = nil
 var cubicX:CGFloat = wscreen * 0.5
 var currentCubic:SKSpriteNode? = nil
+var cubicStop:Bool = false
 
 
 
@@ -29,20 +30,8 @@ class mainScene: SKScene,SKPhysicsContactDelegate {
         self.physicsWorld.contactDelegate = self;
         //设置边界
         self.physicsBody = SKPhysicsBody.init(edgeLoopFrom: self.frame)
-        
     }
     func createContent() {
-//        let centerView:SKView = SKView.init()
-//        centerView.backgroundColor = UIColor.gray
-//        self.view?.addSubview(centerView)
-//        selfcenterView = centerView
-//        centerView.snp.makeConstraints { (make) in
-//            make.centerX.equalToSuperview()
-//            make.top.equalToSuperview().offset(64.0/667.0 * hscreen)
-//            make.width.equalTo(wscreen - 20.0/375.0 * wscreen)
-//            make.height.equalTo(hscreen - 140.0/667.0 * hscreen)
-//        }
-        
         for index in 1...4 {
             let btn:UIButton = UIButton.init()
             btn.backgroundColor = UIColor.green
@@ -75,14 +64,27 @@ class mainScene: SKScene,SKPhysicsContactDelegate {
        print("pengle")
         let nodeA:SKNode = contact.bodyA.node!
         let nodeB:SKNode = contact.bodyB.node!
-        if nodeA.hasActions() {
-            nodeA.removeAction(forKey: "other")
+        let vector:CGVector = contact.contactNormal
+        
+        print(vector)
+        if vector.dy <= -0.99 {
+            cubicStop = false
+            if nodeA.hasActions() {
+                nodeA.removeAction(forKey: "other")
+            }
+            if nodeB.hasActions() {
+                nodeB.removeAction(forKey: "our")
+                currentCubic = nil
+                addCubic()
+            }
+        }else{
+            cubicStop = true
         }
-        if nodeB.hasActions() {
-            nodeB.removeAction(forKey: "our")
-            currentCubic = nil
-            addCubic()
-        }
+    }
+    
+    func didEnd(_ contact: SKPhysicsContact) {
+        print("wanle")
+        cubicStop = false
     }
     
     func defultCubic() {
@@ -107,15 +109,19 @@ class mainScene: SKScene,SKPhysicsContactDelegate {
     
     func rightClick() {
         print("you")
-        var temp:CGPoint = (currentCubic?.position)!
-        temp.x -= 40
-        currentCubic?.position = temp
+        if cubicStop == false {
+            var temp:CGPoint = (currentCubic?.position)!
+            temp.x -= 40
+            currentCubic?.position = temp
+        }
     }
     func leftClick() {
         print("zuo")
-        var temp:CGPoint = (currentCubic?.position)!
-        temp.x += 40
-        currentCubic?.position = temp
+        if cubicStop == false {
+            var temp:CGPoint = (currentCubic?.position)!
+            temp.x += 40
+            currentCubic?.position = temp
+        }
     }
     func fireClick() {
         print("jiang")
