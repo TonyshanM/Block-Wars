@@ -8,26 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		8B51E3F71E1B44D400AF9B6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B51E3F61E1B44D400AF9B6E /* AppDelegate.swift */; };
-		8B51E3F91E1B44D400AF9B6E /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8B51E3F81E1B44D400AF9B6E /* GameScene.sks */; };
-		8B51E3FB1E1B44D400AF9B6E /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8B51E3FA1E1B44D400AF9B6E /* Actions.sks */; };
 		8B51E3FD1E1B44D400AF9B6E /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B51E3FC1E1B44D400AF9B6E /* GameScene.swift */; };
 		8B51E3FF1E1B44D400AF9B6E /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B51E3FE1E1B44D400AF9B6E /* GameViewController.swift */; };
 		8B51E4021E1B44D400AF9B6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B51E4001E1B44D400AF9B6E /* Main.storyboard */; };
 		8B51E4041E1B44D400AF9B6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B51E4031E1B44D400AF9B6E /* Assets.xcassets */; };
 		8B51E4071E1B44D400AF9B6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B51E4051E1B44D400AF9B6E /* LaunchScreen.storyboard */; };
+		8B51E40F1E1B46AD00AF9B6E /* mainScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B51E40E1E1B46AD00AF9B6E /* mainScene.swift */; };
+		94DE03E3B27204141256049D /* Pods_Block_Wars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFDB88E98BAAE07744ECF759 /* Pods_Block_Wars.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D8F0D611637CBE470C611F9 /* Pods-Block Wars.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Block Wars.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Block Wars/Pods-Block Wars.debug.xcconfig"; sourceTree = "<group>"; };
 		8B51E3F31E1B44D400AF9B6E /* Block Wars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Block Wars.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B51E3F61E1B44D400AF9B6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8B51E3F81E1B44D400AF9B6E /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		8B51E3FA1E1B44D400AF9B6E /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		8B51E3FC1E1B44D400AF9B6E /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		8B51E3FE1E1B44D400AF9B6E /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		8B51E4011E1B44D400AF9B6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8B51E4031E1B44D400AF9B6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B51E4061E1B44D400AF9B6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B51E4081E1B44D400AF9B6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B51E40E1E1B46AD00AF9B6E /* mainScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mainScene.swift; sourceTree = "<group>"; };
+		F0BC89B16BCB133A301793BE /* Pods-Block Wars.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Block Wars.release.xcconfig"; path = "Pods/Target Support Files/Pods-Block Wars/Pods-Block Wars.release.xcconfig"; sourceTree = "<group>"; };
+		FFDB88E98BAAE07744ECF759 /* Pods_Block_Wars.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Block_Wars.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94DE03E3B27204141256049D /* Pods_Block_Wars.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F82CFFEDA4285FE0DBB0BFD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FFDB88E98BAAE07744ECF759 /* Pods_Block_Wars.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8B51E3EA1E1B44D400AF9B6E = {
 			isa = PBXGroup;
 			children = (
 				8B51E3F51E1B44D400AF9B6E /* Block Wars */,
 				8B51E3F41E1B44D400AF9B6E /* Products */,
+				8B5CBA1F8F406080332B76CE /* Pods */,
+				5F82CFFEDA4285FE0DBB0BFD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,16 +74,24 @@
 			isa = PBXGroup;
 			children = (
 				8B51E3F61E1B44D400AF9B6E /* AppDelegate.swift */,
-				8B51E3F81E1B44D400AF9B6E /* GameScene.sks */,
-				8B51E3FA1E1B44D400AF9B6E /* Actions.sks */,
 				8B51E3FC1E1B44D400AF9B6E /* GameScene.swift */,
 				8B51E3FE1E1B44D400AF9B6E /* GameViewController.swift */,
+				8B51E40E1E1B46AD00AF9B6E /* mainScene.swift */,
 				8B51E4001E1B44D400AF9B6E /* Main.storyboard */,
 				8B51E4031E1B44D400AF9B6E /* Assets.xcassets */,
 				8B51E4051E1B44D400AF9B6E /* LaunchScreen.storyboard */,
 				8B51E4081E1B44D400AF9B6E /* Info.plist */,
 			);
 			path = "Block Wars";
+			sourceTree = "<group>";
+		};
+		8B5CBA1F8F406080332B76CE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4D8F0D611637CBE470C611F9 /* Pods-Block Wars.debug.xcconfig */,
+				F0BC89B16BCB133A301793BE /* Pods-Block Wars.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -80,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8B51E40B1E1B44D400AF9B6E /* Build configuration list for PBXNativeTarget "Block Wars" */;
 			buildPhases = (
+				CA83920EC1ADBCA3DDCE67D7 /* [CP] Check Pods Manifest.lock */,
 				8B51E3EF1E1B44D400AF9B6E /* Sources */,
 				8B51E3F01E1B44D400AF9B6E /* Frameworks */,
 				8B51E3F11E1B44D400AF9B6E /* Resources */,
+				589935FD6D796757844012AA /* [CP] Embed Pods Frameworks */,
+				7F6AA2262DF91365FAF76F51 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -134,14 +158,60 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B51E4021E1B44D400AF9B6E /* Main.storyboard in Resources */,
-				8B51E3F91E1B44D400AF9B6E /* GameScene.sks in Resources */,
 				8B51E4041E1B44D400AF9B6E /* Assets.xcassets in Resources */,
 				8B51E4071E1B44D400AF9B6E /* LaunchScreen.storyboard in Resources */,
-				8B51E3FB1E1B44D400AF9B6E /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		589935FD6D796757844012AA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Block Wars/Pods-Block Wars-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F6AA2262DF91365FAF76F51 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Block Wars/Pods-Block Wars-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA83920EC1ADBCA3DDCE67D7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8B51E3EF1E1B44D400AF9B6E /* Sources */ = {
@@ -149,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B51E3FD1E1B44D400AF9B6E /* GameScene.swift in Sources */,
+				8B51E40F1E1B46AD00AF9B6E /* mainScene.swift in Sources */,
 				8B51E3FF1E1B44D400AF9B6E /* GameViewController.swift in Sources */,
 				8B51E3F71E1B44D400AF9B6E /* AppDelegate.swift in Sources */,
 			);
@@ -269,6 +340,7 @@
 		};
 		8B51E40C1E1B44D400AF9B6E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D8F0D611637CBE470C611F9 /* Pods-Block Wars.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3LVRZF468V;
@@ -283,6 +355,7 @@
 		};
 		8B51E40D1E1B44D400AF9B6E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0BC89B16BCB133A301793BE /* Pods-Block Wars.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3LVRZF468V;
