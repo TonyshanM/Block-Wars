@@ -7,4 +7,5 @@ target 'Block Wars' do
 
   # Pods for Block Wars
 pod 'Alamofire'
+pod 'SnapKit'
 end
